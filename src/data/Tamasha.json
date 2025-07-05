@@ -1,0 +1,163 @@
+{
+  "overallAssessment": {
+    "narrative": "Tamasha is an ambitious, introspective screenplay that explores identity, authenticity, and the tension between societal expectations and personal fulfillment. While it showcases creative narrative techniques and strong thematic depth, the script's unconventional structure and metaphysical elements may challenge mainstream audience expectations."
+  },
+  "actBasedStructuralAnalysis": {
+    "actStructure": [
+      {
+        "act": "Act I \u2013 Setup",
+        "element": "Big Opening (Hook)",
+        "score": "8",
+        "notes": "The theatrical framing device with the robot and joker establishes the meta-narrative effectively, immediately signaling this is a story about storytelling itself."
+      },
+      {
+        "act": "Act I \u2013 Setup",
+        "element": "Catalyst / Inciting Event",
+        "score": "9",
+        "notes": "The Corsica meeting between Ved and Tara (as Don and Mona) is vibrant, playful, and establishes the central premise of authentic vs performed identity."
+      },
+      {
+        "act": "Act I \u2013 Setup",
+        "element": "Central Conflict Setup",
+        "score": "7",
+        "notes": "The agreement to lie about themselves and never meet again creates immediate dramatic tension, though the deeper identity conflict emerges gradually."
+      },
+      {
+        "act": "Act I \u2013 Setup",
+        "element": "Lock-in / Point of No Return",
+        "score": "8",
+        "notes": "Tara's impulsive decision to sleep with Ved before leaving Corsica emotionally commits both characters to a connection that will inevitably resurface."
+      },
+      {
+        "act": "Act II \u2013 Confrontation",
+        "element": "Subplot / Rising Action",
+        "score": "6",
+        "notes": "Ved's corporate life and relationship with Tara develop in parallel, but the subplot of his childhood storytelling passion could be more integrated."
+      },
+      {
+        "act": "Act II \u2013 Confrontation",
+        "element": "Midpoint Shift",
+        "score": "9",
+        "notes": "Tara's rejection of Ved's proposal with the revelation that his 'real self' is inauthentic perfectly inverts the premise and forces the protagonist to confront his fractured identity."
+      },
+      {
+        "act": "Act II \u2013 Confrontation",
+        "element": "Escalation of Stakes",
+        "score": "8",
+        "notes": "Ved's psychological unraveling and professional self-destruction raise the stakes from a simple romance to an existential crisis."
+      },
+      {
+        "act": "Act III \u2013 Resolution",
+        "element": "Climax",
+        "score": "7",
+        "notes": "Ved's return to Simla and confrontation with the storyteller provides catharsis, though the resolution feels somewhat abstract compared to the concrete problems established."
+      },
+      {
+        "act": "Act III \u2013 Resolution",
+        "element": "Emotional Payoff",
+        "score": "8",
+        "notes": "Ved's reconciliation with his father and eventual reunion with Tara delivers emotional satisfaction, though the time jump creates some emotional distance."
+      },
+      {
+        "act": "Act III \u2013 Resolution",
+        "element": "Thematic Resolution",
+        "score": "9",
+        "notes": "The theatrical finale powerfully reinforces the central theme of authenticity vs performance, bringing the meta-narrative full circle."
+      }
+    ]
+  },
+  "generalScorecard": [
+    {
+      "parameter": "Narrative Style",
+      "score": "8",
+      "justification": "The script employs a distinctive blend of realism, fantasy, and meta-theatrical elements that create a unique voice, though occasionally at the expense of clarity."
+    },
+    {
+      "parameter": "Narrative Structure",
+      "score": "7",
+      "justification": "The non-linear structure and story-within-story framework is ambitious but sometimes creates confusion in the cause-effect chain, particularly in the third act."
+    },
+    {
+      "parameter": "Character Development",
+      "score": "8",
+      "justification": "Ved undergoes a profound transformation from conformist to authentic self, though Tara's development is less fully realized."
+    },
+    {
+      "parameter": "Character Depth",
+      "score": "9",
+      "justification": "Ved's internal conflict between societal expectations and authentic self is richly layered and psychologically nuanced."
+    },
+    {
+      "parameter": "Emotional Engagement",
+      "score": "8",
+      "justification": "The script creates powerful emotional moments, particularly in Ved's breakdown and reconciliation scenes, though the meta-theatrical framing occasionally creates emotional distance."
+    },
+    {
+      "parameter": "Dialogue Quality",
+      "score": "8",
+      "justification": "Dialogue shifts effectively between playful, philosophical, and raw emotional states, though occasionally becomes too on-the-nose with its thematic messaging."
+    },
+    {
+      "parameter": "Genre Alignment",
+      "score": "7",
+      "justification": "As a romantic drama with elements of magical realism and meta-fiction, the script sometimes struggles to balance its tonal shifts between whimsy and psychological realism."
+    },
+    {
+      "parameter": "Audience Appeal",
+      "score": "6",
+      "justification": "The philosophical depth and non-linear structure may limit mainstream appeal, though it will strongly resonate with audiences who appreciate introspective, artistically ambitious cinema."
+    }
+  ],
+  "benchmarkingAndMarketComparison": {
+    "comparisons": [
+      {
+        "title": "La La Land",
+        "similarities": "Both explore the tension between artistic authenticity and societal expectations, featuring protagonists who must rediscover their true passions.",
+        "differences": "La La Land maintains a more accessible narrative structure and focuses on external career goals rather than Tamasha's deeper psychological identity crisis."
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "similarities": "Both feature non-linear storytelling and explore how formative romantic experiences shape identity and personal growth.",
+        "differences": "Tamasha places greater emphasis on cultural expectations and storytelling traditions, while Eternal Sunshine focuses more on memory and relationship dynamics."
+      },
+      {
+        "title": "The Secret Life of Walter Mitty",
+        "similarities": "Both feature protagonists trapped in mundane corporate lives who must reconnect with their more adventurous, authentic selves.",
+        "differences": "Tamasha delves deeper into psychological fragmentation and cultural identity, with a more complex narrative structure and philosophical approach."
+      }
+    ]
+  },
+  "audienceReceptionForecast": {
+    "generalAudience": "6",
+    "targetAudience": "8",
+    "reasoning": "General audiences may struggle with the non-linear structure and meta-theatrical elements, but the target audience of educated urban viewers who appreciate artistic cinema will likely connect with its exploration of authenticity and identity crisis in modern professional life."
+  },
+  "actionableDevelopmentNotes": [
+    {
+      "area": "Narrative Clarity",
+      "note": "Consider streamlining the theatrical framing device and meta-narrative elements, particularly in the third act, to ensure the emotional core of Ved's journey remains accessible to viewers."
+    },
+    {
+      "area": "Character Balance",
+      "note": "Develop Tara's character arc more fully to balance the narrative and provide greater insight into why she recognizes Ved's authentic self when others don't."
+    },
+    {
+      "area": "Pacing",
+      "note": "The second act's portrayal of Ved's corporate life could be condensed to maintain momentum, while the final reconciliation and time jump could be expanded for greater emotional impact."
+    },
+    {
+      "area": "Thematic Integration",
+      "note": "While the storytelling motif is powerful, consider more organically integrating Ved's childhood experiences with the present-day narrative to strengthen the cause-effect relationship."
+    },
+    {
+      "area": "Dialogue",
+      "note": "Some philosophical exchanges about identity could be made more subtle and embedded in character-driven moments rather than explicit statements."
+    }
+  ],
+  "genreAndTargetMarketProfiling": {
+    "primaryGenre": "Romantic Drama",
+    "secondaryGenre": "Psychological Character Study",
+    "targetDemographic": "Urban, educated adults 25-40 with interest in art cinema, self-discovery narratives, and cultural identity",
+    "distributionRecommendation": "Limited theatrical release in metropolitan centers with strong marketing emphasis on the director's vision and thematic depth, followed by streaming platform positioning as a prestigious international title"
+  }
+}

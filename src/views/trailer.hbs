@@ -1,0 +1,250 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{trailer.analysisResult.DetailedAnalysis.movie_title}}
+      - Trailer Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bar-bg { background: #23272f; } .bar-fill { background:
+      linear-gradient(90deg, #4ade80 0%, #22d3ee 100%); } .badge-circle { width:
+      3rem; height: 3rem; border-radius: 9999px; background: #18181b; display:
+      flex; align-items: center; justify-content: center; font-weight: bold;
+      color: #4ade80; font-size: 1.25rem; }
+    </style>
+  </head>
+  <body class="bg-[#181c23] min-h-screen font-sans text-white">
+    <div class="max-w-5xl mx-auto py-10 px-4 space-y-10">
+      <!-- Overview -->
+      <div class="space-y-4 p-4 bg-[#23272f] rounded-lg shadow-lg">
+        <div class="flex justify-between items-center">
+          <p class="text-xl font-bold  text-gray-300">Overview</p>
+          <p><span
+              class="text-green-400 font-extrabold text-2xl"
+            >{{trailer.analysisResult.DetailedAnalysis.overall_score}}</span>/10</p>
+        </div>
+        <div class="flex gap-4">
+          <img
+            src="/placeholder_img.png"
+            alt="{{trailer.analysisResult.DetailedAnalysis.movie_title}} poster"
+            class="w-48 rounded"
+          />
+          <div class="flex-1 space-y-2">
+            <p>
+              <span
+                class="font-bold text-gray-200"
+              >{{trailer.analysisResult.DetailedAnalysis.movie_title}}</span>
+              <span
+                class="text-gray-500"
+              >({{trailer.analysisResult.DetailedAnalysis.trailer_version}})</span>
+            </p>
+            <div class="space-y-1">
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Duration:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.input_metadata.duration_seconds}}
+                  sec</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Target:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.input_metadata.target_market}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Analyzed:</span>
+                <span class="font-medium">{{completedAt}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Release window:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.input_metadata.release_window}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Genre:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.input_metadata.genre}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Language:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.input_metadata.language}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Creative Quality:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.executive_summary.creative_technical_quality}}</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-gray-500 w-40">Studio Verdict:</span>
+                <span
+                  class="font-medium"
+                >{{trailer.analysisResult.DetailedAnalysis.executive_summary.studio_takeaway}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Virality Assessment -->
+      <div>
+        <h2 class="text-xl font-bold text-yellow-300 mb-4">Virality Assessment</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {{#each trailer.analysisResult.DetailedAnalysis.virality_assessment}}
+            <div
+              class="bg-[#18181b] rounded-xl shadow-lg p-6 flex items-center justify-between border border-gray-800"
+            >
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-1">{{@key}}</h3>
+                <p class="text-gray-400 text-sm">{{description}}</p>
+              </div>
+              <div class="relative flex items-center justify-center w-12 h-12">
+                +
+                <!-- subtle circle behind the number -->
+                +
+                <div
+                  class="absolute inset-0 rounded-full bg-green-900 opacity-20"
+                ></div>
+                +
+                <span
+                  class="relative text-green-400 font-bold text-2xl"
+                >{{score}}</span>
+                +
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Technical Scorecard -->
+      <div>
+        <h2 class="text-xl font-bold text-yellow-300 mb-4">Technical Scorecard</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {{#each trailer.analysisResult.DetailedAnalysis.technical_scorecard}}
+            <div
+              class="bg-[#18181b] rounded-xl shadow-lg p-6 flex items-center justify-between border border-gray-800"
+            >
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-1">{{@key}}</h3>
+                <p class="text-gray-400 text-sm">{{description}}</p>
+              </div>
+              <div class="relative flex items-center justify-center w-12 h-12">
+                +
+                <!-- subtle circle behind the number -->
+                +
+                <div
+                  class="absolute inset-0 rounded-full bg-green-900 opacity-20"
+                ></div>
+                +
+                <span
+                  class="relative text-green-400 font-bold text-2xl"
+                >{{score}}</span>
+                +
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Audience Forecast -->
+      <div>
+        <h2 class="text-xl font-bold text-yellow-300 mb-4">Audience Forecast</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {{#each trailer.analysisResult.DetailedAnalysis.audience_forecast}}
+            <div
+              class="bg-[#18181b] rounded-xl shadow-lg p-6 flex items-center justify-between border border-gray-800"
+            >
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-1">{{@key}}</h3>
+                <p class="text-gray-400 text-sm">{{notes}}</p>
+              </div>
+              <div class="relative flex items-center justify-center w-12 h-12">
+                +
+                <!-- subtle circle behind the number -->
+                +
+                <div
+                  class="absolute inset-0 rounded-full bg-green-900 opacity-20"
+                ></div>
+                +
+                <span
+                  class="relative text-green-400 font-bold text-2xl"
+                >{{score}}</span>
+                +
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Structure Analysis -->
+      <div>
+        <h2 class="text-xl font-bold text-yellow-300 mb-4">Structure Analysis</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {{#each trailer.analysisResult.DetailedAnalysis.trailer_architecture}}
+            <div
+              class="bg-[#18181b] rounded-xl shadow-lg p-6 flex items-center justify-between border border-gray-800"
+            >
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-1">{{@key}}</h3>
+                <p class="text-gray-400 text-sm">{{description}}</p>
+              </div>
+              <div class="relative flex items-center justify-center w-12 h-12">
+                +
+                <!-- subtle circle behind the number -->
+                +
+                <div
+                  class="absolute inset-0 rounded-full bg-green-900 opacity-20"
+                ></div>
+                +
+                <span
+                  class="relative text-green-400 font-bold text-2xl"
+                >{{score}}</span>
+                +
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Benchmarking & Market Comparison -->
+      <div class="bg-[#18181b] rounded-xl shadow-lg p-8 border border-gray-800">
+        <h2 class="text-xl font-bold text-yellow-300 mb-6">Benchmarking & Market
+          Comparison</h2>
+        <div class="overflow-x-auto">
+          <table
+            class="min-w-full border border-gray-700 rounded-xl overflow-hidden"
+          >
+            <thead class="bg-[#232323]">
+              <tr>
+                <th
+                  class="py-3 px-4 text-left text-yellow-300 font-semibold"
+                >Title</th>
+                <th
+                  class="py-3 px-4 text-left text-yellow-300 font-semibold"
+                >Similarities</th>
+                <th
+                  class="py-3 px-4 text-left text-yellow-300 font-semibold"
+                >Differences</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each
+                trailer.analysisResult.DetailedAnalysis.market_positioning.comparable_trailers
+              }}
+                <tr class="border-b border-gray-700 hover:bg-[#23232b]">
+                  <td class="py-3 px-4 text-white font-medium">{{title}}</td>
+                  <td class="py-3 px-4 text-gray-300">{{comparison_notes}}</td>
+                  <td class="py-3 px-4 text-gray-300"></td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

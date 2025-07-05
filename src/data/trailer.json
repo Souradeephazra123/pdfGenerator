@@ -1,0 +1,170 @@
+{
+    "metaData": {
+        "userIds": [
+            "682f0f4fe9a088cfb701b167"
+        ],
+        "fileName": "Fighter-Trailer_68665e6fc0130f6ec6899753.mp4",
+        "fileType": "video/mp4",
+        "status": 0
+    },
+    "_id": "68665e6fc0130f6ec6899753",
+    "createdAt": "2025-07-03T10:41:51.910Z",
+    "updatedAt": "2025-07-03T10:41:51.910Z",
+    "__v": 0,
+    "lastUpdated": "2025-07-03T10:44:11.165Z",
+    "message": "Video analysis completed",
+    "status": "completed",
+    "analysisResult": {
+        "VideoInfo": {
+            "VideoDurationSeconds": 189.1,
+            "AnalysisDurationSeconds": 189.1,
+            "TotalFramesAnalyzed": 19,
+            "FrameIntervalSeconds": 10,
+            "S3Uri": "s3://rcs-recobee/GenAI_Media_Analytics/Fighter-Trailer_68665e6fc0130f6ec6899753.mp4"
+        },
+        "DetailedAnalysis": {
+            "trailer_id": "trailer_1",
+            "movie_title": "Fighter",
+            "trailer_version": "v1",
+            "input_metadata": {
+                "duration_seconds": 180,
+                "genre": "Action",
+                "platform": "Theatrical",
+                "target_market": "Indian",
+                "language": "Hindi",
+                "release_window": "Q1 2024"
+            },
+            "executive_summary": {
+                "creative_technical_quality": "Strong",
+                "studio_takeaway": "Market-ready"
+            },
+            "trailer_architecture": {
+                "hook": {
+                    "score": 8,
+                    "description": "Strong opening with high-octane action and impactful visuals."
+                },
+                "premise_reveal": {
+                    "score": 7,
+                    "description": "Clear conflict and stakes are established, though pacing could be tighter."
+                },
+                "escalation": {
+                    "score": 6,
+                    "description": "Good momentum build-up, but some segments feel repetitive."
+                },
+                "final_beat": {
+                    "score": 9,
+                    "description": "Powerful emotional peak and effective title/logo payoff."
+                }
+            },
+            "technical_scorecard": {
+                "cinematography": {
+                    "score": 8,
+                    "description": "High visual polish and dynamic framing."
+                },
+                "editing_rhythm": {
+                    "score": 7,
+                    "description": "Pacing is mostly effective, though some cuts feel abrupt."
+                },
+                "sound_design": {
+                    "score": 8,
+                    "description": "Clear and impactful sound layering."
+                },
+                "music_score_fit": {
+                    "score": 9,
+                    "description": "Emotionally resonant and well-timed score."
+                },
+                "color_grading": {
+                    "score": 8,
+                    "description": "Consistent tone and vibrant visuals."
+                },
+                "narrative_clarity": {
+                    "score": 7,
+                    "description": "Genre and stakes are communicated effectively."
+                },
+                "text_title_usage": {
+                    "score": 6,
+                    "description": "Typography is clear but could be more dynamic."
+                },
+                "visual_effects": {
+                    "score": 8,
+                    "description": "High-quality and realistic visual effects."
+                },
+                "emotional_arc": {
+                    "score": 8,
+                    "description": "Engaging emotional timeline with strong high points."
+                }
+            },
+            "virality_assessment": {
+                "emotional_high_points": {
+                    "score": 8,
+                    "description": "Several moments likely to trend or be shared."
+                },
+                "shareability_quotient": {
+                    "score": 7,
+                    "description": "Potential for memes and GIFs, especially from action sequences."
+                },
+                "visual_signature": {
+                    "score": 9,
+                    "description": "Hero shots and cinematic flourishes are memorable."
+                },
+                "trend_synergy": {
+                    "score": 6,
+                    "description": "Aligns with current geopolitical themes but lacks unique cultural hooks."
+                },
+                "fan_activation_potential": {
+                    "score": 8,
+                    "description": "Strong lead actor fandom pull and IP power."
+                }
+            },
+            "market_positioning": {
+                "primary_genre": "Action",
+                "secondary_genre_tone": "Drama",
+                "intended_market": "Indian audience",
+                "comparable_trailers": [
+                    {
+                        "title": "Top Gun: Maverick",
+                        "comparison_notes": "Similar high-octane action and military theme."
+                    },
+                    {
+                        "title": "Uri: The Surgical Strike",
+                        "comparison_notes": "Comparable patriotic and military elements."
+                    }
+                ]
+            },
+            "audience_forecast": {
+                "core_genre_fans": {
+                    "score": 9,
+                    "notes": "Highly satisfies action genre traits and star power."
+                },
+                "general_audience": {
+                    "score": 7,
+                    "notes": "Accessible and entertaining, though some elements may be too niche."
+                },
+                "international_appeal": {
+                    "score": 5,
+                    "notes": "Limited language-independent clarity and visuals."
+                }
+            },
+            "development_notes": {
+                "suggested_edits": [
+                    "Trim repetitive segments in the escalation phase.",
+                    "Boost the impact of the CTA in the final beat."
+                ],
+                "technical_corrections": [
+                    "Improve dialogue mix for better clarity.",
+                    "Ensure color consistency across all scenes."
+                ],
+                "viral_optimization": [
+                    "Highlight meme-ready shots from action sequences.",
+                    "Create sharper quote tags for social media sharing."
+                ]
+            },
+            "overall_score": 7.8
+        },
+        "ProcessingInfo": {
+            "ProcessedAt": "2025-07-03T10:44:11.125965"
+        }
+    },
+    "completedAt": "2025-07-03T10:44:11.165Z",
+    "isDelete": false
+}

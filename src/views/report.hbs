@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tamasha Script Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bar-bg { background: #23272f; }
+      .bar-fill { background: linear-gradient(90deg, #4ade80 0%, #22d3ee 100%); }
+      .score-badge {
+        background: linear-gradient(135deg, #22c55e 60%, #16a34a 100%);
+        color: #fff;
+        border-radius: 9999px;
+        font-weight: bold;
+        font-size: 2rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px #22c55e44;
+      }
+    </style>
+  </head>
+  <body class="bg-[#181c23] min-h-screen font-sans">
+    <div class="max-w-5xl mx-auto py-10 px-4">
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+        <div>
+          <h1 class="text-3xl font-bold text-white mb-1">Tamasha</h1>
+          <div class="text-gray-400 text-sm">Romantic Drama &middot; 2015</div>
+        </div>
+        <div class="flex items-center gap-4 mt-4 md:mt-0">
+          <div class="score-badge">8.2</div>
+          <div class="text-green-400 font-semibold">Overall Score</div>
+        </div>
+      </div>
+
+      <!-- Executive Summary / Assessment Narrative -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-green-300 mb-2">Assessment Narrative</h2>
+        <p class="text-gray-200">{{report.overallAssessment.narrative}}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div>
+            <div class="text-gray-400 text-xs uppercase mb-1">Primary Genre</div>
+            <div class="text-white">{{report.genreAndTargetMarketProfiling.primaryGenre}}</div>
+            <div class="text-gray-400 text-xs uppercase mt-4 mb-1">Secondary Genre</div>
+            <div class="text-white">{{report.genreAndTargetMarketProfiling.secondaryGenre}}</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xs uppercase mb-1">Target Demographic</div>
+            <div class="text-white">{{report.genreAndTargetMarketProfiling.targetDemographic}}</div>
+            <div class="text-gray-400 text-xs uppercase mt-4 mb-1">Distribution Recommendation</div>
+            <div class="text-white">{{report.genreAndTargetMarketProfiling.distributionRecommendation}}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Act-based Structured Analysis -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-yellow-300 mb-4">Act-based Structured Analysis</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Act I -->
+          <div>
+            <h3 class="text-gray-300 font-semibold mb-2">Act I – Setup</h3>
+            {{#each report.actBasedStructuralAnalysis.actStructure}}
+              {{#if (eq act "Act I – Setup")}}
+                <div class="mb-2">
+                  <div class="flex justify-between text-gray-400 text-xs">
+                    <span>{{element}}</span>
+                    <span>{{score}}/10</span>
+                  </div>
+                  <div class="bar-bg rounded h-3 w-full mt-1">
+                    <div class="bar-fill h-3 rounded" style="width: {{score}}0%;"></div>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+          <!-- Act II -->
+          <div>
+            <h3 class="text-gray-300 font-semibold mb-2">Act II – Confrontation</h3>
+            {{#each report.actBasedStructuralAnalysis.actStructure}}
+              {{#if (eq act "Act II – Confrontation")}}
+                <div class="mb-2">
+                  <div class="flex justify-between text-gray-400 text-xs">
+                    <span>{{element}}</span>
+                    <span>{{score}}/10</span>
+                  </div>
+                  <div class="bar-bg rounded h-3 w-full mt-1">
+                    <div class="bar-fill h-3 rounded" style="width: {{score}}0%;"></div>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+          <!-- Act III -->
+          <div>
+            <h3 class="text-gray-300 font-semibold mb-2">Act III – Resolution</h3>
+            {{#each report.actBasedStructuralAnalysis.actStructure}}
+              {{#if (eq act "Act III – Resolution")}}
+                <div class="mb-2">
+                  <div class="flex justify-between text-gray-400 text-xs">
+                    <span>{{element}}</span>
+                    <span>{{score}}/10</span>
+                  </div>
+                  <div class="bar-bg rounded h-3 w-full mt-1">
+                    <div class="bar-fill h-3 rounded" style="width: {{score}}0%;"></div>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Analysis Metrics -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-yellow-300 mb-4">Story Analysis Metrics</h2>
+        <div>
+          {{#each report.generalScorecard}}
+            <div class="mb-3">
+              <div class="flex justify-between text-gray-400 text-xs">
+                <span>{{parameter}}</span>
+                <span>{{score}}/10</span>
+              </div>
+              <div class="bar-bg rounded h-3 w-full mt-1">
+                <div class="bar-fill h-3 rounded" style="width: {{score}}0%;"></div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Action Items -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-yellow-300 mb-4">Action Items</h2>
+        <ul class="list-disc pl-6 text-gray-200">
+          {{#each report.actionableDevelopmentNotes}}
+            <li class="mb-2"><span class="font-semibold text-white">{{area}}:</span> {{note}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <!-- Benchmarking & Market Comparison -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-yellow-300 mb-4">Benchmarking & Market Comparison</h2>
+        <div class="space-y-4">
+          {{#each report.benchmarkingAndMarketComparison.comparisons}}
+            <div class="border border-gray-700 rounded p-3 bg-[#181c23]">
+              <div class="font-semibold text-white">{{title}}</div>
+              <div class="text-gray-300"><span class="font-semibold">Similarities:</span> {{similarities}}</div>
+              <div class="text-gray-300"><span class="font-semibold">Differences:</span> {{differences}}</div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Audience Reception Forecast -->
+      <div class="bg-[#23272f] rounded-xl p-6 mb-8 shadow">
+        <h2 class="text-lg font-semibold text-yellow-300 mb-4">Audience Reception Forecast</h2>
+        <div class="grid grid-cols-2 gap-4 mb-2">
+          <div class="border border-gray-700 rounded p-3 bg-[#181c23]">
+            <span class="font-semibold text-white">General Audience:</span> <span class="text-gray-300">{{report.audienceReceptionForecast.generalAudience}}</span>
+          </div>
+          <div class="border border-gray-700 rounded p-3 bg-[#181c23]">
+            <span class="font-semibold text-white">Target Audience:</span> <span class="text-gray-300">{{report.audienceReceptionForecast.targetAudience}}</span>
+          </div>
+        </div>
+        <div class="mt-2 text-gray-300"><span class="font-semibold">Reasoning:</span> {{report.audienceReceptionForecast.reasoning}}</div>
+      </div>
+    </div>
+  </body>
+</html>
