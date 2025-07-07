@@ -5,16 +5,22 @@ const generatePDF = require("../utils/pdfGenerator");
 const router = express.Router();
 
 // Route to generate PDF from movie script data
-router.get("/generate/script/:movieTitle", async (req, res) => {
+router.get("/generate/script/:movieId", async (req, res) => {
   try {
-    const movieTitle = req.params.movieTitle || req.query.title || "Tamasha";
-    const dataPath = path.join(__dirname, "..", "data", `${movieTitle}.json`);
+   const movieId = req.params.movieId || req.query.movieId;
+    if(!movieId) {
+      return res.status(400).json({
+        success: false,
+        message: "Movie ID is required to generate trailer PDF.",
+      });
+    }
+    const dataPath = path.join(__dirname, "..", "data", `Tamasha.json`);
 
     // Check if the data file exists
     if (!fs.existsSync(dataPath)) {
       return res.status(404).json({
         success: false,
-        message: `Data file for movie "${movieTitle}" not found. Please ensure ${movieTitle}.json exists in the data folder.`,
+        message: `Data file for movieid "${movieId}" not found. Please ensure ${movieId} exists in the data folder.`,
       });
     }
 
@@ -24,7 +30,7 @@ router.get("/generate/script/:movieTitle", async (req, res) => {
     if (!fs.existsSync(templatesDir)) {
       fs.mkdirSync(templatesDir);
     }
-    const outputPath = path.join(templatesDir, `${movieTitle}_report.pdf`);
+    const outputPath = path.join(templatesDir, `report.pdf`);
 
     // Render HTML using the main app's view engine
     req.app.render(
@@ -44,8 +50,7 @@ router.get("/generate/script/:movieTitle", async (req, res) => {
         res.json({
           success: true,
           message: "PDF generated successfully",
-          movieTitle: movieTitle,
-          fileName: `${movieTitle}_report.pdf`,
+          fileName: `report.pdf`,
           pdfData: pdfBuffer.toString("base64"),
         });
       }
@@ -56,16 +61,23 @@ router.get("/generate/script/:movieTitle", async (req, res) => {
   }
 });
 
-router.get("/generate/trailer/:movieTitle", async (req, res) => {
+router.get("/generate/trailer/:movieId", async (req, res) => {
   try {
-    const movieTitle = req.params.movieTitle || req.query.title || "trailer";
+
+    const movieId = req.params.movieId || req.query.movieId;
+    if(!movieId) {
+      return res.status(400).json({
+        success: false,
+        message: "Movie ID is required to generate trailer PDF.",
+      });
+    }
     const dataPath = path.join(__dirname, "..", "data", "trailer.json");
     // const dataPath = path.join(__dirname, "..", "data", `${movieTitle}.json`);
 
     if (!fs.existsSync(dataPath)) {
       return res.status(404).json({
         success: false,
-        message: `Data file for movie "${movieTitle}" not found. Please ensure ${movieTitle}.json exists in the data folder.`,
+        message: `Data file for this "${movieId}" not found. Please ensure the specific id ${movieId}.json exists in the data folder.`,
       });
     }
 
@@ -77,7 +89,7 @@ router.get("/generate/trailer/:movieTitle", async (req, res) => {
     }
     const outputPath = path.join(
       templatesDir,
-      `${movieTitle}_trailer_report.pdf`
+      `trailer_report.pdf`
     );
 
     // Render HTML using the main app's view engine
@@ -98,8 +110,7 @@ router.get("/generate/trailer/:movieTitle", async (req, res) => {
         res.json({
           success: true,
           message: "PDF generated successfully",
-          movieTitle: movieTitle,
-          fileName: `${movieTitle}_trailer_report.pdf`,
+          fileName: `trailer_report.pdf`,
           pdfData: pdfBuffer.toString("base64"),
         });
       }
